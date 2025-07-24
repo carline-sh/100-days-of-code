@@ -33,6 +33,10 @@ Make a new commit with the name "make navbar cool"
 git commit -m "make navbar cool"
 ```
 
+```sh
+git push
+```
+
 ## Day 2
 
 ### Starting Vite
