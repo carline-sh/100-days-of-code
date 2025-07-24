@@ -1,13 +1,5 @@
 // add new input
 // cross listitem of list when clicked
-
-let lucBtn = document.querySelector('#luc-button');
-
-lucBtn.addEventListener('click', function () {
-    // alert('boobs');
-    console.log('smol bobber');
-});
-
 let input = document.querySelector('#myInput');
 let myUl = document.querySelector('#myUl');
 
