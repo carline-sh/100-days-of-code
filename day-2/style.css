@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    background: rgb(255, 192, 203);
+    padding: 16px;
+    margin: 16px;
+    font-family: sans-serif;
+    background: #FFC0CB;
+    background: radial-gradient(circle, rgba(255, 192, 203, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+.bitcount-text {
+    font-family: "Bitcount", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 350;
+    margin: 0;
+}
+
+#myUl {
+    padding: 0;
+    margin: 0;
+
+    margin-top: 16px;
+}
+
+ul li {
+    color: rgb(216, 49, 85);
+    font-weight: 600px;
+    cursor: pointer;
+    padding: 4px;
+    position: relative;
+    font-size: 18px;
+    text-decoration: none;
+    list-style-type: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.myButton {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    text-align: center;
+}
+
+.addButton {
+    font-family: sans-serif;
+    background-color: rgba(255, 193, 206, 0.973);
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgb(216, 49, 85);
+    border: none;
+}
+
+.addButton:hover {
+    background-color: rgb(248, 165, 183);
+}
+
+.mainText {
+    padding: 16px;
+    margin: 16px auto;
+    max-width: 420px;
+    background-color: rgb(255, 222, 232);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.486);
+}
+
+ul li:hover {
+    background-color: rgba(255, 193, 206, 0.973);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+#myInput {
+    border: none;
+    border-radius: 6px;
+    padding: 6px;
+}
