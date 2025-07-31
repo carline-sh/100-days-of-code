@@ -74,3 +74,15 @@ I copied this into my html head element.
 ```
 I put this code in my css file and I got pretty font! :).
 
+## Day 3
+
+### Creating a react project
+
+```sh
+pnpm create vite
+```
+### Starting the dev server
+
+```sh
+pnpm dev
+```
