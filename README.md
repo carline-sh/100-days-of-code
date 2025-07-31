@@ -86,3 +86,5 @@ pnpm create vite
 ```sh
 pnpm dev
 ```
+
+I set up a basic react app using `pnpm create vite`. To start dev server I used `pnpm dev`. It gave me a button clicker and two rotating logos of Vite and React. I removed the code and added my own button clicker which, with every click, shows a photo of a cat.
