@@ -33,7 +33,7 @@ jobs:
           cache: "pnpm"
       - name: Install
         run: pnpm install --frozen-lockfile=false
-      - name: Build Docs
+      - name: Build
         run: mkdir dist && pnpm -r build
       - name: Setup Pages
         uses: actions/configure-pages@v5
