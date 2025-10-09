@@ -83,6 +83,7 @@ export function App() {
         {isWinner && "Winner! - Refresh to try again"}
         {isLoser && "Nice try! - Refresh to try again"}
       </div>
+      <div>Press enter to refresh</div>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord
         reveal={isLoser}
