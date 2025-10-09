@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <p id="text"></p>
+        <img src="cookie.svg" id="pookie" />
+        <div id="cookie-count"></div>
+    </div>
+    <script>
+        document.getElementById('text').innerHTML = "Cookie Clicker";
+        let cookies = Number(localStorage.getItem('cc')) || 0;
+        const cookieCount = document.getElementById("cookie-count");
+        const cookie = document.getElementById("pookie");
+        function updateScreen() {
+            cookieCount.innerText = cookies + " cookies";
+        }
+
+        updateScreen();
+
+        function onCookieClick() {
+            cookies += 1;
+            localStorage.setItem('cc', cookies);
+            updateScreen();
+        }
+
+        cookie.addEventListener("click", onCookieClick);
+    </script>
+    <style>
+        .box {
+            max-width: 420px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 9px;
+            background-color: brown;
+            color: rgb(182, 182, 8);
+            border-radius: 12px;
+            padding: 16px;
+
+        }
+
+        #cookie-count {
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: rgb(117, 32, 32);
+        }
+
+        #pookie {
+            width: 10rem;
+            cursor: pointer;
+            transition: 250ms;
+        }
+
+        #pookie:hover {
+            transform: scale(1.1);
+        }
+
+        #pookie:active {
+            transform: scale(0.9);
+        }
+    </style>
+</body>
+
+</html>
