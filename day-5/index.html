@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Habit Tracker</h1>
+    </header>
+
+    <main>
+        <section id="habit-overview">
+            <h2>Habit Overview</h2>
+            <div id="overview-stats">
+                <p>Total Habits: <span id="total-habits">0</span></p>
+                <p>Completed Habits: <span id="completed-habits">0</span></p>
+                <p>Incomplete Habits: <span id="incomplete-habits">0</span></p>
+                <p>Longest streak <span id="percentage-completed">0</span></p>
+            </div>
+        </section>
+
+        <section id="habit-list">
+            <h2>Your Habits</h2>
+        </section>
+
+        <section id="add-habit">
+            <h2>Add a new habit</h2>
+            <form id="add-habit-form">
+                <input type="text" id="add-new-habit" placeholder="Enter new habit" required>
+                <select id="habit-category">
+                    <option value="health">Health</option>
+                    <option value="finance">Finance</option>
+                    <option value="learning">Learning</option>
+                    <option value="cleaning">Cleaning</option>
+                </select>
+                <select id="habit-frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="once">Once</option>
+                </select>
+                <button type="submit">Add Habit</button>
+            </form>
+        </section>
+
+        <section id="edit-habit">
+            <h2>Edit Habit</h2>
+            <form id="edit-habit-form">
+                <input type="text" id="edit-habit-name" placeholder="Edit habit name" required>
+                <select id="edit-habit-category">
+                    <option value="health">Health</option>
+                    <option value="finance">Finance</option>
+                    <option value="learning">Learning</option>
+                    <option value="cleaning">Cleaning</option>
+                </select>
+                <select id="edit-habit-frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="once">Once</option>
+                </select>
+                <button type="submit">Save Changes</button>
+                <button type="button" id="cancel-edit">Cancel</button>
+            </form>
+        </section>
+
+        <section id="reminders">
+            <h2>Habit reminders</h2>
+            <form id="reminder-form">
+                <select id="reminder-habit">
+                </select>
+                <input type="time" id="reminder-time" required>
+                <select id="reminder-time">
+                    <option value="once">Once</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                </select>
+                <button type="submit">Set Reminder</button>
+            </form>
+            <div id="reminder-list"></div>
+        </section>
+
+        <section id="analytics">
+            <h2>Analytics dashboard</h2>
+            <div id="analytics-content">
+                <p>Habits completed: <span id="habits-completed">0</span></p>
+                <p>Longest streak: <span id="longest-streak">0</span></p>
+                <p>Most frequent habit: <span id="most-frequent-habit">None</span></p>
+            </div>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <div id="settings-content">
+                <button id="clear-data">Clear all data</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Habit Tracker App</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
