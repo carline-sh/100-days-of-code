@@ -34,7 +34,7 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile=false
       - name: Build Docs
-        run: pnpm -r build
+        run: mkdir dist && pnpm -r build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
