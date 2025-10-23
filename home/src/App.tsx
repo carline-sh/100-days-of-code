@@ -1,4 +1,4 @@
-import { LuExpand, LuExternalLink } from "react-icons/lu";
+import { LuExpand } from "react-icons/lu";
 
 function App() {
   return (
