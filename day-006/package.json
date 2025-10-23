@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "build": "cp -r ../day-006 ../dist/"
+    }
+}

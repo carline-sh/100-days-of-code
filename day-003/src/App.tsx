@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   let myList = [];
   for (let i = 0; i < count; i++) {
-    myList.push("test")
+    myList.push("test");
   }
 
   return (
@@ -24,15 +24,16 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <div className="catbox">
-        count is {myList.map((item) => (
+        count is{" "}
+        {myList.map((item) => (
           <div>
             {item}
-            <img className="cat" src="https://http.cat/404.png" alt="" srcset="" />
+            <img className="cat" src="https://http.cat/404.png" alt="" />
           </div>
         ))}
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
