@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <div>
-      <div className="flex justify-between items-center p-4 bg-emerald-200 text-neutral-800 border">
+      <div className="flex justify-between items-center px-4 py-2 bg-linear-to-b from-emerald-200 to-emerald-400 text-neutral-800 border comic-relief-regular">
         <div className="">Home</div>
         <div className="">News</div>
         <div className="">Fashion</div>
