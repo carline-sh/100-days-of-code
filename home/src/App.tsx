@@ -1,4 +1,3 @@
-import { LuExpand } from "react-icons/lu";
 import { SitePreview } from "./sitepreview";
 
 function App() {
