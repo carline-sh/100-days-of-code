@@ -12,7 +12,11 @@ export function Navbar() {
           { path: "/series", label: "Series" },
           { path: "/music", label: "Music" },
         ].map((item) => (
-          <Link to={item.path} className="px-2 py-1  hover:underline">
+          <Link
+            to={item.path}
+            className="px-2 py-1 hover:underline"
+            activeProps={{ className: "font-bold border-b-2" }}
+          >
             {item.label}
           </Link>
         ))}
