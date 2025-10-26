@@ -1,11 +1,15 @@
-import Navbar from "./components/Navbar";
-import Blog from "./components/Blog";
-import { IoMdSearch } from "react-icons/io";
-import "./index.css";
-import Clouds from "./Ads/Clouds.jpg";
-import { IoIosPerson, IoIosSettings } from "react-icons/io";
+import * as React from "react";
+import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { Navbar } from "../components/Navbar";
+import { Blog } from "../components/Blog";
+import { IoIosPerson, IoIosSettings, IoMdSearch } from "react-icons/io";
+import Clouds from "../Ads/Clouds.jpg";
 
-function App() {
+export const Route = createRootRoute({
+  component: RootComponent,
+});
+
+function RootComponent() {
   return (
     <div
       className="bg-center bg-cover p-8 bg-fixed bg-no-repeat min-h-screen"
@@ -19,8 +23,8 @@ function App() {
         </div>
       </div>
       <Navbar />
-      <div className="flex w-full gap-4 flex-wrap flex-col md:flex-row">
-        <div className="w-1/4 p-2">
+      <div className="w-full gap-4 grid grid-cols-1 md:grid-cols-[1fr_3fr_1fr]">
+        <div className="p-2">
           <div className="border w-fit max-h-2xs"></div>
           <div className="pt-4 h-fit comic-relief-regular">
             <button className="border p-2 rounded-md mb-2 bg-white/80 h-fit flex items-center">
@@ -35,11 +39,11 @@ function App() {
           </div>
         </div>
 
-        <div className="grow">
-          <Blog />
+        <div className="">
+          <Outlet />
         </div>
 
-        <div className="w-1/4 p-2 flex justify-end">
+        <div className="p-2 flex justify-end">
           <div className="flex gap-2 border border-neutral-500 items-center flex-start py-0 px-2 rounded-md bg-white/80 h-fit comic-relief-regular w-full">
             <div className="w-4 h-4">
               <IoMdSearch className="w-4 h-4" />
@@ -51,5 +55,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
