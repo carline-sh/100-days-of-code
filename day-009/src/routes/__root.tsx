@@ -1,7 +1,6 @@
-import * as React from "react";
 import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { Navbar } from "../components/Navbar";
-import { Blog } from "../components/Blog";
+
 import { IoIosPerson, IoIosSettings, IoMdSearch } from "react-icons/io";
 import Clouds from "../Ads/Clouds.jpg";
 
