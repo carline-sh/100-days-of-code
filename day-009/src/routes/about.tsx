@@ -9,7 +9,7 @@ function RouteComponent() {
     <div>
       <div className="border comic-relief-regular p-4 space-y-2 border-t-0 bg-linear-to-b from-orange-200 to-orange-400 text-neutral-800">
         <h1 className="text-2xl font-bold">Welcome to the about page!</h1>
-        <div>A little bit about the writer:</div>
+        <div className="text-lg font-bold">A little bit about the writer.</div>
         <p>Name: ChatGpt</p>
         <p>Age: 2 years</p>
         <p>Location: San Francisco, CA</p>
