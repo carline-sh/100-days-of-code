@@ -1,7 +1,7 @@
 import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
 import { Navbar } from "../components/Navbar";
 
-import { IoIosPerson, IoIosSettings, IoMdSearch } from "react-icons/io";
+import { IoIosPerson, IoIosSettings } from "react-icons/io";
 import Clouds from "../Ads/Clouds.jpg";
 import { HiCursorArrowRays } from "react-icons/hi2";
 import { Search } from "../components/Search";
