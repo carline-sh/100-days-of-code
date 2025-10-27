@@ -1,9 +1,10 @@
-import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
 import { Navbar } from "../components/Navbar";
 
 import { IoIosPerson, IoIosSettings, IoMdSearch } from "react-icons/io";
 import Clouds from "../Ads/Clouds.jpg";
 import { HiCursorArrowRays } from "react-icons/hi2";
+import { Search } from "../components/Search";
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -27,15 +28,26 @@ function RootComponent() {
         <div className="p-2">
           <div className=" max-h-2xs"></div>
           <div className="pt-4 h-fit comic-relief-regular">
-            <button className="border p-2 rounded-md mb-2 bg-white/30 border-neutral-300 h-fit w-full flex items-center hover:underline backdrop-blur-sm hover:border-neutral-400 transition-all duration-200 ">
+            <Link
+              to="/about"
+              className="border p-2 rounded-md mb-2 bg-white/30 border-neutral-300 h-fit w-full flex items-center hover:underline backdrop-blur-sm hover:border-neutral-400 transition-all duration-200 "
+            >
               <IoIosPerson /> <span>About Writer</span>
-            </button>
-            <button className="border p-2 rounded-md mb-2 bg-white/30 border-neutral-300 h-fit w-full flex items-center hover:underline backdrop-blur-sm hover:border-neutral-400 transition-all duration-200 ">
+            </Link>
+            <a
+              href="https://carline.sh"
+              target="_blank"
+              className="border p-2 rounded-md mb-2 bg-white/30 border-neutral-300 h-fit w-full flex items-center hover:underline backdrop-blur-sm hover:border-neutral-400 transition-all duration-200 "
+            >
               <IoIosPerson /> <span>My Profile</span>
-            </button>
-            <button className="border p-2 rounded-md mb-2 bg-white/30 border-neutral-300 h-fit w-full flex items-center hover:underline backdrop-blur-sm hover:border-neutral-400 transition-all duration-200 ">
+            </a>
+            <a
+              href="https://carline.sh"
+              target="_blank"
+              className="border p-2 rounded-md mb-2 bg-white/30 border-neutral-300 h-fit w-full flex items-center hover:underline backdrop-blur-sm hover:border-neutral-400 transition-all duration-200 "
+            >
               <IoIosSettings /> <span>Settings</span>
-            </button>
+            </a>
 
             <div className="space-y-2">
               <iframe
@@ -72,12 +84,7 @@ function RootComponent() {
         </div>
 
         <div className="p-2 space-y-2">
-          <div className="flex gap-2 border border-neutral-500 items-center flex-start py-0 px-2 rounded-md bg-white/80 h-fit comic-relief-regular w-full">
-            <div className="w-4 h-4">
-              <IoMdSearch className="w-4 h-4" />
-            </div>
-            <input className="w-fit" type="text" placeholder="search" />
-          </div>
+          <Search />
           <a
             href="https://carline.sh"
             target="_blank"
