@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { BiPoll } from "react-icons/bi";
 import { FaRegImage } from "react-icons/fa";
 import { HiOutlineGif } from "react-icons/hi2";
 
 export const Composer = () => {
+  const [content, setContent] = useState("");
   return (
     <div className="border-b w-full p-4">
       <div>
@@ -14,11 +16,20 @@ export const Composer = () => {
               alt="placeholder"
             />
           </div>
-          <input
-            className="grow p-2 rounded-3xl bg-neutral-200 focus:outline-none"
-            type="text"
-            placeholder="What's happening?"
-          />
+          <div className="flex items-center gap-2 grow px-4 py-2 rounded-3xl bg-neutral-200">
+            <input
+              className="focus:outline-none grow"
+              type="text"
+              placeholder="What's happening?"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            />
+            {content.length > 5 && (
+              <button className="text-xs px-2 py-1 bg-blue-500 text-white rounded-full">
+                Tweet
+              </button>
+            )}
+          </div>
           <div className="text-2xl text-blue-500 flex items-center gap-2">
             <FaRegImage />
             <HiOutlineGif />
