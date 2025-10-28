@@ -1,6 +1,13 @@
+import { useEffect, useState } from "react";
 import { Post } from "./Post";
 
-const POSTS = [
+export type PostType = {
+  id: number;
+  username: string;
+  content: string;
+};
+
+const FALLBACK_POSTS = [
   {
     id: 1,
     content: "Hello, world!",
@@ -11,24 +18,35 @@ const POSTS = [
     content: "Hello, world! 2",
     username: "Jane Doe",
   },
-  {
-    id: 3,
-    content: "Hello, world! 3",
-    username: "John Doe",
-  },
 ];
 
-export type PostType = (typeof POSTS)[number];
-
 export const Timeline = () => {
+  const [posts, setPosts] = useState<PostType[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response = await fetch("/api/posts");
+      const data = await response.json();
+      setPosts(data);
+    };
+    fetchPosts();
+  }, []);
+
   return (
     <div className="w-full">
       <ul>
-        {POSTS.map((post) => (
-          <li key={post.id}>
-            <Post post={post} />
-          </li>
-        ))}
+        {posts.length > 0 &&
+          posts.map((post) => (
+            <li key={post.id}>
+              <Post post={post} />
+            </li>
+          ))}
+        {posts.length === 0 &&
+          FALLBACK_POSTS.map((post) => (
+            <li key={post.id}>
+              <Post post={post} />
+            </li>
+          ))}
       </ul>
     </div>
   );
