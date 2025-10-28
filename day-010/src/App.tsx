@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div className="min-h-screen w-full">
+    <div className="min-h-screen w-full bg-white">
       <div className="flex justify-center pt-[20vh]">
         <div className="border p-4 items-center justify-center flex bg-neutral-200 flex-col rounded-md border-neutral-400">
           <div className="font-bold text-neutral-800">Welcome back!</div>
