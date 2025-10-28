@@ -20,6 +20,7 @@ function App() {
                 "hangman",
                 "day-008",
                 "day-009",
+                "day-010",
               ]
                 .reverse()
                 .map((day) => (
