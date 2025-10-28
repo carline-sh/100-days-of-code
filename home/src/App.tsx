@@ -3,7 +3,7 @@ import { SitePreview } from "./sitepreview";
 function App() {
   return (
     <>
-      <div className="min-h-screen w-full">
+      <div className="min-h-screen w-full bg-white">
         <div className="mx-auto w-full max-w-7xl p-4 space-y-4">
           <div className="border p-4 bg-neutral-200 rounded-md space-y-4 border-neutral-400">
             <h1 className="text-neutral-700 text-2xl font-bold p-4">

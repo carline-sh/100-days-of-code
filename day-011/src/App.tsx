@@ -5,7 +5,7 @@ import { Timeline } from "./components/Timeline";
 
 export const App = () => {
   return (
-    <div className="min-h-screen w-full grid grid-cols-[1fr_2fr_1fr]">
+    <div className="min-h-screen w-full grid grid-cols-[1fr_2fr_1fr] bg-white">
       <Sidebar />
       <div className="flex-1 border-x">
         <div className="border-b w-full">
