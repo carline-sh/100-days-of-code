@@ -6,8 +6,8 @@ export const Navbar = () => {
         <div className="text-white space-y-2 p-4">
           <div>Padding</div>
           <div>Margin</div>
-          <div>flex</div>
-          <div>grid</div>
+          <div>Flex</div>
+          <div>Grid</div>
         </div>
       </div>
     </div>
