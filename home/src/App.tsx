@@ -22,6 +22,7 @@ function App() {
                 "day-009",
                 "day-010",
                 "day-011",
+                "day-012",
                 "day-013",
               ]
                 .reverse()
