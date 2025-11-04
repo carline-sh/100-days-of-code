@@ -9,12 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SpacingRouteImport } from './routes/spacing'
 import { Route as FlexRouteImport } from './routes/flex'
+import { Route as ColorsRouteImport } from './routes/colors'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SpacingRoute = SpacingRouteImport.update({
+  id: '/spacing',
+  path: '/spacing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FlexRoute = FlexRouteImport.update({
   id: '/flex',
   path: '/flex',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ColorsRoute = ColorsRouteImport.update({
+  id: '/colors',
+  path: '/colors',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +37,59 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/colors': typeof ColorsRoute
   '/flex': typeof FlexRoute
+  '/spacing': typeof SpacingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/colors': typeof ColorsRoute
   '/flex': typeof FlexRoute
+  '/spacing': typeof SpacingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/colors': typeof ColorsRoute
   '/flex': typeof FlexRoute
+  '/spacing': typeof SpacingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/flex'
+  fullPaths: '/' | '/colors' | '/flex' | '/spacing'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/flex'
-  id: '__root__' | '/' | '/flex'
+  to: '/' | '/colors' | '/flex' | '/spacing'
+  id: '__root__' | '/' | '/colors' | '/flex' | '/spacing'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ColorsRoute: typeof ColorsRoute
   FlexRoute: typeof FlexRoute
+  SpacingRoute: typeof SpacingRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/spacing': {
+      id: '/spacing'
+      path: '/spacing'
+      fullPath: '/spacing'
+      preLoaderRoute: typeof SpacingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/flex': {
       id: '/flex'
       path: '/flex'
       fullPath: '/flex'
       preLoaderRoute: typeof FlexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/colors': {
+      id: '/colors'
+      path: '/colors'
+      fullPath: '/colors'
+      preLoaderRoute: typeof ColorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,7 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ColorsRoute: ColorsRoute,
   FlexRoute: FlexRoute,
+  SpacingRoute: SpacingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -12,7 +12,9 @@ function RootComponent() {
       <div className="bg-neutral-800 min-h-screen w-full">
         <div className="grid grid-cols-[1fr_3fr_1fr]">
           <Navbar />
-          <Outlet />
+          <div className="h-screen overflow-y-auto">
+            <Outlet />
+          </div>
         </div>
       </div>
     </React.Fragment>
