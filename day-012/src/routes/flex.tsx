@@ -11,6 +11,10 @@ function RouteComponent() {
       <p className="text-neutral-300">
         Flex is a custom display mode. It allows you to move items weirdly. For
         us to use flex, we need to add the class "flex" to the parent element.
+        <p className="text-neutral-300 py-2">
+          Grid goes hand in hand with flex, so you will see them used together
+          often. But I still chose to separate them into different topics.
+        </p>
       </p>
       <h3 className="text-xl font-bold">flex-direction</h3>
       <p className="text-neutral-300">
@@ -60,6 +64,46 @@ function RouteComponent() {
         <div className="bg-blue-400 rounded-md w-30 h-10 p-2"></div>
         <div className="bg-blue-400 rounded-md w-30 h-10 p-2"></div>
         <div className="bg-blue-400 rounded-md w-30 h-10 p-2"></div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <h3 className="text-xl font-bold py-2">justify-center</h3>
+            <p className="text-neutral-300 py-2">
+              With justify-center, we can align boxes to the center of the
+              parent element. We only use justify-center to align our items
+              horizontally.
+            </p>
+          </div>
+          <div className="bg-blue-600 w-full rounded-md p-4 flex flex-row gap-2 items-center justify-center">
+            <div className="bg-blue-400 rounded-md w-30 h-10 p-2"></div>
+            <div className="bg-blue-400 rounded-md w-30 h-10 p-2"></div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h3 className="text-xl font-bold py-2">items-center</h3>
+            <p className="text-neutral-300 py-2">
+              We use items-center to align items vertically in the center of the
+              parent element.
+            </p>
+          </div>
+          <div className="bg-blue-600 w-full h-50 rounded-md p-4 flex flex-row gap-2 items-center">
+            <div className="bg-blue-400 rounded-md w-30 h-10 p-2"></div>
+            <div className="bg-blue-400 rounded-md w-30 h-10 p-2"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 className="text-xl font-bold py-2">gap</h3>
+        <p className="text-neutral-300 py-2">
+          Gap is the space between boxes. In the example below i used gap-6 to
+          create a gap of 6 pixels between the boxes.
+        </p>
+        <div className="bg-blue-600 w-35 rounded-md p-4 flex flex-row gap-6 ">
+          <div className="bg-blue-400 rounded-md w-10 h-10"></div>
+          <div className="bg-blue-400 rounded-md w-10 h-10"></div>
+        </div>
       </div>
     </div>
   );

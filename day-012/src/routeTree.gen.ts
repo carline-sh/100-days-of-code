@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpacingRouteImport } from './routes/spacing'
+import { Route as GridRouteImport } from './routes/grid'
 import { Route as FlexRouteImport } from './routes/flex'
 import { Route as ColorsRouteImport } from './routes/colors'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const SpacingRoute = SpacingRouteImport.update({
   id: '/spacing',
   path: '/spacing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GridRoute = GridRouteImport.update({
+  id: '/grid',
+  path: '/grid',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FlexRoute = FlexRouteImport.update({
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/colors': typeof ColorsRoute
   '/flex': typeof FlexRoute
+  '/grid': typeof GridRoute
   '/spacing': typeof SpacingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/colors': typeof ColorsRoute
   '/flex': typeof FlexRoute
+  '/grid': typeof GridRoute
   '/spacing': typeof SpacingRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,22 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/colors': typeof ColorsRoute
   '/flex': typeof FlexRoute
+  '/grid': typeof GridRoute
   '/spacing': typeof SpacingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/colors' | '/flex' | '/spacing'
+  fullPaths: '/' | '/colors' | '/flex' | '/grid' | '/spacing'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/colors' | '/flex' | '/spacing'
-  id: '__root__' | '/' | '/colors' | '/flex' | '/spacing'
+  to: '/' | '/colors' | '/flex' | '/grid' | '/spacing'
+  id: '__root__' | '/' | '/colors' | '/flex' | '/grid' | '/spacing'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ColorsRoute: typeof ColorsRoute
   FlexRoute: typeof FlexRoute
+  GridRoute: typeof GridRoute
   SpacingRoute: typeof SpacingRoute
 }
 
@@ -76,6 +86,13 @@ declare module '@tanstack/react-router' {
       path: '/spacing'
       fullPath: '/spacing'
       preLoaderRoute: typeof SpacingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/grid': {
+      id: '/grid'
+      path: '/grid'
+      fullPath: '/grid'
+      preLoaderRoute: typeof GridRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/flex': {
@@ -106,6 +123,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ColorsRoute: ColorsRoute,
   FlexRoute: FlexRoute,
+  GridRoute: GridRoute,
   SpacingRoute: SpacingRoute,
 }
 export const routeTree = rootRouteImport

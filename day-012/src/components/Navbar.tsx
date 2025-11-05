@@ -14,7 +14,9 @@ export const Navbar = () => {
           <Link className="block" to="/flex">
             Flex
           </Link>
-          <div>Grid</div>
+          <Link className="block" to="/grid">
+            Grid
+          </Link>
           <Link className="block" to="/colors">
             Colors
           </Link>
