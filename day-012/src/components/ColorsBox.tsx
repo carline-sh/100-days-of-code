@@ -1,5 +1,6 @@
 const colors = [
   [
+    "red",
     "bg-red-50",
     "bg-red-100",
     "bg-red-200",
@@ -13,6 +14,7 @@ const colors = [
     "bg-red-950",
   ],
   [
+    "orange",
     "bg-orange-50",
     "bg-orange-100",
     "bg-orange-200",
@@ -26,6 +28,7 @@ const colors = [
     "bg-orange-950",
   ],
   [
+    "amber",
     "bg-amber-50",
     "bg-amber-100",
     "bg-amber-200",
@@ -39,6 +42,7 @@ const colors = [
     "bg-amber-950",
   ],
   [
+    "yellow",
     "bg-yellow-50",
     "bg-yellow-100",
     "bg-yellow-200",
@@ -52,6 +56,7 @@ const colors = [
     "bg-yellow-950",
   ],
   [
+    "lime",
     "bg-lime-50",
     "bg-lime-100",
     "bg-lime-200",
@@ -65,6 +70,7 @@ const colors = [
     "bg-lime-950",
   ],
   [
+    "green",
     "bg-green-50",
     "bg-green-100",
     "bg-green-200",
@@ -78,6 +84,7 @@ const colors = [
     "bg-green-950",
   ],
   [
+    "emerald",
     "bg-emerald-50",
     "bg-emerald-100",
     "bg-emerald-200",
@@ -91,6 +98,7 @@ const colors = [
     "bg-emerald-950",
   ],
   [
+    "teal",
     "bg-teal-50",
     "bg-teal-100",
     "bg-teal-200",
@@ -104,6 +112,7 @@ const colors = [
     "bg-teal-950",
   ],
   [
+    "cyan",
     "bg-cyan-50",
     "bg-cyan-100",
     "bg-cyan-200",
@@ -117,6 +126,7 @@ const colors = [
     "bg-cyan-950",
   ],
   [
+    "sky",
     "bg-sky-50",
     "bg-sky-100",
     "bg-sky-200",
@@ -130,6 +140,7 @@ const colors = [
     "bg-sky-950",
   ],
   [
+    "blue",
     "bg-blue-50",
     "bg-blue-100",
     "bg-blue-200",
@@ -143,6 +154,7 @@ const colors = [
     "bg-blue-950",
   ],
   [
+    "indigo",
     "bg-indigo-50",
     "bg-indigo-100",
     "bg-indigo-200",
@@ -156,6 +168,7 @@ const colors = [
     "bg-indigo-950",
   ],
   [
+    "violet",
     "bg-violet-50",
     "bg-violet-100",
     "bg-violet-200",
@@ -169,6 +182,7 @@ const colors = [
     "bg-violet-950",
   ],
   [
+    "purple",
     "bg-purple-50",
     "bg-purple-100",
     "bg-purple-200",
@@ -182,6 +196,7 @@ const colors = [
     "bg-purple-950",
   ],
   [
+    "fuchsia",
     "bg-fuchsia-50",
     "bg-fuchsia-100",
     "bg-fuchsia-200",
@@ -195,6 +210,7 @@ const colors = [
     "bg-fuchsia-950",
   ],
   [
+    "pink",
     "bg-pink-50",
     "bg-pink-100",
     "bg-pink-200",
@@ -208,6 +224,7 @@ const colors = [
     "bg-pink-950",
   ],
   [
+    "rose",
     "bg-rose-50",
     "bg-rose-100",
     "bg-rose-200",
@@ -221,6 +238,7 @@ const colors = [
     "bg-rose-950",
   ],
   [
+    "slate",
     "bg-slate-50",
     "bg-slate-100",
     "bg-slate-200",
@@ -234,6 +252,7 @@ const colors = [
     "bg-slate-950",
   ],
   [
+    "gray",
     "bg-gray-50",
     "bg-gray-100",
     "bg-gray-200",
@@ -247,6 +266,7 @@ const colors = [
     "bg-gray-950",
   ],
   [
+    "zinc",
     "bg-zinc-50",
     "bg-zinc-100",
     "bg-zinc-200",
@@ -260,6 +280,7 @@ const colors = [
     "bg-zinc-950",
   ],
   [
+    "neutral",
     "bg-neutral-50",
     "bg-neutral-100",
     "bg-neutral-200",
@@ -273,6 +294,7 @@ const colors = [
     "bg-neutral-950",
   ],
   [
+    "stone",
     "bg-stone-50",
     "bg-stone-100",
     "bg-stone-200",
@@ -285,24 +307,36 @@ const colors = [
     "bg-stone-900",
     "bg-stone-950",
   ],
-  ["bg-black", "bg-white"],
+  ["black", "bg-black"],
+  ["white", "bg-white"],
 ];
 
 export const ColorsBox = () => {
   return (
     <div className="space-y-2">
-      {colors.map((color) => (
-        <div key={color[0] + "x"} className="flex gap-2 items-center">
-          {color.map((color) => (
-            <div
-              key={color}
-              className={
-                color + " w-14 h-14 flex items-center justify-center rounded-sm"
-              }
-            >
-              <span>{color.split("-")[2]}</span>
-            </div>
-          ))}
+      {colors.map((colorRow) => (
+        <div key={colorRow[0] + "x"} className="flex gap-2 items-center">
+          {colorRow.map((color, index) => {
+            if (index === 0) {
+              return (
+                <div key={color + index} className="w-24">
+                  <span>{color}</span>
+                </div>
+              );
+            }
+
+            return (
+              <div
+                key={color + index}
+                className={
+                  color +
+                  " w-14 h-14 flex items-center justify-center rounded-sm"
+                }
+              >
+                <span>{color.split("-")[2]}</span>
+              </div>
+            );
+          })}
         </div>
       ))}
     </div>
