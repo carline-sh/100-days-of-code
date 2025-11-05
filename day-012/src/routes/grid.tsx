@@ -20,7 +20,7 @@ function RouteComponent() {
             number of columns specified.
           </p>
           <div className="gap-4 py-4 grid grid-cols-2">
-            <div className="flex bg-blue-500 rounded-md p-2  w-80 h-40">
+            <div className="flex bg-blue-600 rounded-md p-2  w-80 h-40">
               <div className="flex items-center justify-center bg-blue-400 rounded-md w-full h-full">
                 <div className="block text-center">
                   <p className="p-2">column 1</p>
@@ -28,7 +28,7 @@ function RouteComponent() {
                 </div>
               </div>
             </div>
-            <div className="flex bg-blue-500 rounded-md p-2  w-80 h-40">
+            <div className="flex bg-blue-600 rounded-md p-2  w-80 h-40">
               <div className="flex items-center justify-center bg-blue-400 rounded-md w-full h-full">
                 <div className="block text-center">
                   <p className="p-2">column 2</p>
