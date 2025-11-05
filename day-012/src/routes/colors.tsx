@@ -43,7 +43,7 @@ function RouteComponent() {
             </p>
             <div className="flex items-center justify-center bg-blue-500 rounded-md py-4">
               <div className="border bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 w-60 h-20 p-2 rounded-md flex items-center justify-center">
-                bg-linear-to-r from blue-500 via purple-500 to pink-500
+                bg-linear-to-r from-blue-500 via-purple-500 to-pink-500
               </div>
             </div>
           </div>
