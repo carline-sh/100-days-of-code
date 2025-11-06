@@ -122,13 +122,16 @@ I also made my home page for the 100 days of code today. This will update as the
 ### Using react router dom
 
 Today I made a most popular movie website with react. I used a public api to get all the information. This was confusing to me so I had to follow a tutorial...
-<br/>I will have to focus more on styling since it is not a hundred percent perfect but still very happy with how it turned out.
+
+I will have to focus more on styling since it is not a hundred percent perfect but still very happy with how it turned out.
 
 ## Day 9
 
 ### Blogue (blog)
 
-Had so much fun making Blogue. I spent a lot of time on styling, tried to give it an outdated vibe, like this was an actual blog ten years ago. Also one of the first times I used Tanstack Router. On top of that I added some 'ads' linked to my portfolio website as self promo.
+Had so much fun making Blogue. I spent a lot of time on styling, tried to give it an outdated vibe, like this was an actual blog ten years ago.
+
+Also one of the first times I used Tanstack Router. On top of that I added some 'ads' linked to my portfolio website as self promo.
 
 ## Day 10
 
@@ -140,13 +143,17 @@ Today I made a simple login page, since I'll probably make many more in my futur
 
 ### Twitter Clone
 
-Tried something new today, this is my first project with a backend! So complicated though, I used Fastify for my webserver and Postman to send http requests. I will need to practice more and probably study both of these more in depth. But still happy with my progress.
+Tried something new today, this is my first project with a backend! So complicated though, I used Fastify for my webserver and Postman to send http requests.
+
+I will need to practice more and probably study both of these more in depth. But still happy with my progress.
 
 ## Day 12
 
 ### Tailwindcss Explainer
 
-I felt so overwhelmed when I studied Tailwindcss docs that I decided to make myself an explainer. Not as much in depth as the original docs but explaining the concepts I seem to use most often. I used TanstackRouter again today, I feel like I'm getting the hang of routes.
+I felt so overwhelmed when I studied Tailwindcss docs that I decided to make myself an explainer. Not as much in depth as the original docs but explaining the concepts I seem to use most often.
+
+I used TanstackRouter again today, I feel like I'm getting the hang of routes.
 
 ## Day 13
 
