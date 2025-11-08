@@ -10,4 +10,5 @@ export default defineConfig({
     autoCodeSplitting: true,
   }),
   react(), tailwindcss()],
+  base: "/100-days-of-code/day-014/",
 })
