@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cp -r ./dist/* ../dist/",
+    "build": "tsc -b && vite build && cp -r ./dist ../dist/day-014",
     "lint": "eslint .",
     "preview": "vite preview"
   },
