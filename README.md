@@ -149,9 +149,9 @@ I will need to practice more and probably study both of these more in depth. But
 
 ## Day 12
 
-### Tailwindcss Explainer
+### TailwindCss Explainer
 
-I felt so overwhelmed when I studied Tailwindcss docs that I decided to make myself an explainer. Not as much in depth as the original docs but explaining the concepts I seem to use most often.
+I felt so overwhelmed when I studied TailwindCss docs that I decided to make myself an explainer. Not as much in depth as the original docs but explaining the concepts I seem to use most often.
 
 I used TanstackRouter again today, I feel like I'm getting the hang of routes.
 
