@@ -159,7 +159,7 @@ I used TanstackRouter again today, I feel like I'm getting the hang of routes.
 
 ### Space X Missions
 
-Today I decided to make another project with a public api. I used tanstack/react-query.
+Today I decided to make another project with a public api. I used tanstack/react-query. I'm making good progress!
 
 ## Day 14
 
