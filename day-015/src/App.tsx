@@ -2,7 +2,7 @@ import "./App.css";
 
 export const App = () => {
   return (
-    <div className="min-h-screen w-full py-4">
+    <div className="min-h-screen w-full py-8">
       <div className="p-8 bg-neutral-100 text-neutral-800 w-fit mx-auto rounded-md">
         <div className="bg-slate-500 flex items-center justify-center p-4 text-xl font-bold rounded-md w-fit mx-auto">
           Hello There!
