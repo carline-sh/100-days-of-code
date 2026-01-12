@@ -166,3 +166,9 @@ Today I decided to make another project with a public api. I used tanstack/react
 ### Bitwiser
 
 For today's project I decided to make a microlearning tool. It states facts about programming, this way you can learn a new thing everyday. You can also go back in history to see all previous lessons.
+
+## Day 15
+
+### Pizza Size Selector
+
+Something fun, made a pizza size selector as practise.
